@@ -3,10 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon premier projet</title>
+    <meta name="description" content="Portfolio de développeur web Full Stack. Découvrez mes compétences et projets.">
+    <title>Younes | Développeur Web</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenue sur mon site !</h1>
-    <p>Je suis étudiant en Développement Web Full Stack.</p>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#" class="logo">Y<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container" id="accueil">
+            <div class="hero-content">
+                <p class="eyebrow">ÉTUDIANT EN DÉVELOPPEMENT DIGITAL</p>
+
+                <h1>Bonjour, je suis <span>Younes.</span></h1>
+
+                <h2>Développeur Web Full Stack en formation</h2>
+
+                <p class="hero-description">
+                    J'apprends à créer des sites web modernes,
+                    accessibles et performants. Voici mon univers
+                    et les projets que je construis.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">
+                        Voir mes projets
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="code-icon">&lt;/&gt;</div>
+                <p class="card-label">EN COURS DE CONSTRUCTION</p>
+                <h3>Learn. Build. Improve.</h3>
+                <p>Chaque projet est une nouvelle occasion d'apprendre.</p>
+            </div>
+        </section>
+
+        <section class="section container" id="apropos">
+            <p class="eyebrow">QUI SUIS-JE ?</p>
+            <h2 class="section-title">À propos de moi</h2>
+            <p class="section-description">
+                Je suis étudiant en Développement Digital à l'OFPPT.
+                Je développe progressivement mes compétences en HTML,
+                CSS, JavaScript et dans les technologies Full Stack.
+                Mon objectif est de construire des applications utiles
+                et de progresser grâce à des projets concrets.
+            </p>
+        </section>
+
+        <section class="section container" id="competences">
+            <p class="eyebrow">CE QUE J'APPRENDS</p>
+            <h2 class="section-title">Mes compétences</h2>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <span>01</span>
+                    <h3>HTML</h3>
+                    <p>Structure et contenu des pages web.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span>02</span>
+                    <h3>CSS</h3>
+                    <p>Mise en page, design et responsive.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span>03</span>
+                    <h3>JavaScript</h3>
+                    <p>Logique et interactions web.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span>04</span>
+                    <h3>Git & GitHub</h3>
+                    <p>Versionnement et partage de projets.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container" id="projets">
+            <p class="eyebrow">MES RÉALISATIONS</p>
+            <h2 class="section-title">Projets sélectionnés</h2>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-number">PROJET 01</div>
+                    <h3>Mon premier site web</h3>
+                    <p>
+                        Une première page web réalisée avec HTML
+                        et CSS pour apprendre les bases du développement.
+                    </p>
+                    <span class="tag">HTML · CSS</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">PROJET 02</div>
+                    <h3>Task Manager</h3>
+                    <p>
+                        Un projet de gestion de tâches prévu pour
+                        pratiquer JavaScript et la manipulation du DOM.
+                    </p>
+                    <span class="tag">À venir · JavaScript</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container contact-content">
+                <p class="eyebrow">RESTONS EN CONTACT</p>
+                <h2>Construisons quelque chose ensemble.</h2>
+                <p>
+                    Vous souhaitez découvrir mes projets ou échanger
+                    autour du développement web ?
+                </p>
+                <a href="https://github.com/" class="btn btn-primary">
+                    Mon GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Younes — Portfolio de développeur web.</p>
+    </footer>
+
 </body>
 </html>

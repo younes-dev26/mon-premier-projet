@@ -1,0 +1,344 @@
+/* 1. Variables et réglages généraux */
+:root {
+    --bg: #0b1120;
+    --surface: #111b2e;
+    --text: #f1f5f9;
+    --muted: #a0aec0;
+    --accent: #38bdf8;
+    --border: #243148;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin-inline: auto;
+}
+
+/* 2. Navigation */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(11, 17, 32, 0.92);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.logo span,
+.hero h1 span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 0.92rem;
+    transition: color 0.25s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* 3. Hero */
+.hero {
+    min-height: 570px;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 60px;
+    padding-block: 80px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.hero h2 {
+    color: #cbd5e1;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 500;
+    margin-top: 18px;
+}
+
+.hero-description,
+.section-description {
+    max-width: 620px;
+    margin-top: 20px;
+    color: var(--muted);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+/* 4. Boutons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-weight: 700;
+    transition: transform 0.25s, background 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    color: #07111f;
+    background: var(--accent);
+}
+
+.btn-primary:hover {
+    background: #7dd3fc;
+}
+
+.btn-secondary {
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+/* 5. Carte décorative */
+.hero-card {
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at top right, #164e63, transparent 60%),
+        var(--surface);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.code-icon {
+    color: var(--accent);
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.card-label {
+    color: var(--accent);
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+}
+
+.hero-card h3 {
+    margin-top: 12px;
+    font-size: 1.5rem;
+}
+
+.hero-card > p:last-child {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+/* 6. Sections */
+.section {
+    padding-block: 75px;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.section-description {
+    font-size: 1.05rem;
+}
+
+/* 7. Compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.skill-card,
+.project-card {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.skill-card:hover,
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.skill-card span {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.skill-card h3,
+.project-card h3 {
+    margin-block: 12px;
+    font-size: 1.2rem;
+}
+
+.skill-card p,
+.project-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* 8. Projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.project-number {
+    color: var(--accent);
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 5px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: #bae6fd;
+    font-size: 0.8rem;
+}
+
+/* 9. Contact */
+.contact-section {
+    margin-top: 50px;
+    padding-block: 80px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.contact-content h2 {
+    max-width: 650px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.contact-content > p:not(.eyebrow) {
+    margin-block: 20px 26px;
+    color: var(--muted);
+}
+
+/* 10. Footer */
+.footer {
+    padding: 25px 5%;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+}
+
+/* 11. Adaptation aux téléphones */
+@media (max-width: 800px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-block: 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-block: 60px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 8px 14px;
+    }
+
+    .nav-links a {
+        font-size: 0.82rem;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero-card {
+        padding: 24px;
+    }
+}
